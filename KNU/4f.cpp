@@ -8,7 +8,7 @@ void findDivisors1(int n)
 	for (int i = 1; i <= n; i++)
 	{
 		if (n % i == 0)
-			cout << i << " ";
+			cout << i << "\n";
 	}
 	cout << "\n";
 }
@@ -37,7 +37,7 @@ void findDivisors3(int n)
 			cout << i << " ";
 			int tmp = n / i;
 			if (tmp != i)
-				cout << tmp << " ";
+				cout << tmp << "\n";
 		}
 	}
 	cout << "\n";
@@ -48,7 +48,7 @@ int main()
 	int n;
 	cin >> n;
 
-	findDivisors3(n);
+	findDivisors1(n);
 
 	return 0;
 }

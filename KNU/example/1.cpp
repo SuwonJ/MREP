@@ -37,8 +37,9 @@ void findDivisors2(int n){
 	cout << "\n";
 }
 
-void findDivisors3(int n)
+void findDivisors3(int n,int chk)
 {
+    int tmmp;
 	for (int i = 1; i <= sqrt(n); i++)
 	{
 		if (n % i == 0)
@@ -47,16 +48,17 @@ void findDivisors3(int n)
 			int tmp = n / i;
 			if (tmp != i){
 				if(i!=1){
-					cout << tmp <<"*"<< i<< "\n";
+                    findDivisors3(tmp,1);
+					if(chk==1) cout << tmp <<"*"<< i<<"*";
+                    if(chk==0) cout << tmp <<"*"<< i<< "\n";
 				}
 				else{
-					cout << tmp<< "\n";
+					/*if(chk==0)*/ tmmp=tmp;
 				}
 			}
-				
 		}
 	}
-	cout << "\n";
+    if(chk==0) cout <<tmmp<< "\n";
 }
 
 int main() 
@@ -64,7 +66,7 @@ int main()
 	int n;
 	cin >> n;
 
-	findDivisors3(n);
+	findDivisors3(n,0);
 
 	return 0;
 }
