@@ -6,7 +6,7 @@ using namespace std;
 vector<int> vec;
 int n,visit[9];
 
-void dfs(int r){
+void dfs(){
 	if(vec.size()==n){
 		int i=0;
 		for(i=0;i<vec.size();i++){
@@ -15,10 +15,13 @@ void dfs(int r){
 	}
 	cout<<"\n";
 
-	for(int i=0;i<n;i++){
+	for(int i=1;i<=n;i++){
 		if(visit[i]==0){
 			visit[i]=1;
-			
+			vec.push_back(i);
+			dfs();
+			visit[i]=0;
+			vec.pop_back();
 		}
 	}
 }
