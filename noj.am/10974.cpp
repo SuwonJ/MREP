@@ -12,8 +12,10 @@ void dfs(){
 		for(i=0;i<vec.size();i++){
 			cout<<vec[i];
 		}
+		cout<<"\n";
+		return;
 	}
-	cout<<"\n";
+	
 
 	for(int i=1;i<=n;i++){
 		if(visit[i]==0){
@@ -28,6 +30,7 @@ void dfs(){
 
 int main(void) {
 	cin>>n;
+	dfs();
 	return 0;
 
 }
