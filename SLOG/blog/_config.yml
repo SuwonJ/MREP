@@ -3,23 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SuwonJ
-subtitle: '장수원'
+title: Slog - SuwonJ
+subtitle: ''
 description: ''
-keywords: programming, designing
-author: 장수원
+keywords:
+author: SuwonJ
 language: ko
-timezone: 'Asia/Seoul'
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://suwonj.github.io/blog
-root: /
+url: https://suwonj.github.io/blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -104,5 +103,5 @@ theme: keep
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/SuwonJ/blog.git
+  repo: https://github.com/suwonj/blog.git
   branch: master

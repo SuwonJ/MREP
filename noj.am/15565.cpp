@@ -1,51 +1,56 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
+int arr[1000000];
+int minr = 2100000000;
+int main(void) {
+    int N, K, cnt = 0, e = 0, s = 0;
+    cin >> N >> K;
 
-int main(void){
-    int N,K,i,cnt=0,e=0,s=0,minr=0;
-    cin>>N>>K;
-    int arr[N]={};
-    for(i=0;i<N;i++){
-        cin>>arr[i];
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
     }
-    i=0;
-    while(s<N){
-        if(cnt<K){
-            if(arr[e]==1){
-               e++;
-               cnt++;
+
+    while (s < N) {
+        if (cnt < K && e < N) {
+            if (arr[e] == 1) {
+                e++;
+                cnt++;
             }
-            else if(arr[e]==2){
+            else if (arr[e] == 2) {
                 e++;
             }
         }
-        if(cnt>K){
-            if(arr[s]==1){
-               e++;
-               cnt++;
+
+        if (cnt > K) {
+            if (arr[s] == 1) {
+                s++;
+                cnt--;
             }
-            else if(arr[e]==2){
-                e++;
+            else if (arr[e] == 2) {
+                s++;
             }
         }
-        if(cnt==K){
-            minr=e-s;
-        }
-        i++;
-        if(arr[e]==1){
-            cnt++;
-        }
-        else if(arr[e]==2){
-            e++;
-        }
-        if(cnt==K){
-            if(arr[e]==1){
+
+        if (cnt == K) {
+            if (e - s < minr) {
+                minr = e - s;
+            }
+            if (arr[s] == 1) {
                 cnt--;
             }
             s++;
         }
+        else if (e == N )
+            s++;
+
     }
-    cout<<cnt<<"\n";
+    if (minr == 2100000000) {
+        cout << -1;
+    }
+    else {
+         cout << minr << "\n";
+    }
+   
     return 0;
 }

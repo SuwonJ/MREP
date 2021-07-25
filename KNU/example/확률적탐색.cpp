@@ -222,8 +222,7 @@ void proceedTreePlayerMove() {
 	for (int i = 0; i < currentNode->children.size(); i++) {
 		Node* node = currentNode->children.at(i);
 		if (node == NULL) continue;
-		if (maxNode == NULL
-			|| node->winRate() > maxWinRate) {
+		if (maxNode == NULL|| node->winRate() > maxWinRate) {
 			maxNode = node;
 			maxWinRate = node->winRate();
 		}
