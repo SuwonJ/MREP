@@ -1,5 +1,4 @@
 //승률방식
-
 #include<iostream>
 #include<vector>
 #include<string>
