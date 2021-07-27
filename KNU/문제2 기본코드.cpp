@@ -78,18 +78,23 @@ int main()
 	/*
 	* 주석 (1)~(3) 아래에 코드를 작성합니다.	 
 	*/
-	for (int i = 0; i < T; i++) 
-	{
+	for (int i = 0; i < T; i++) {
 		// (1) sum[] 배열에서 N[i]보다 작은 가장 큰 값의 index 구하기
-		// int rightBorderIndex = BinarySearch(sum, 0, numPrimes - 1, N[i] - 1);
+		int rightBorderIndex = BinarySearch(sum, 0, numPrimes - 1, N[i] - 1);
 
 
 		// (2) 앞에서 구한 index에서부터 합이 소수인 지점까지 왼쪽으로 이동
 		//     값 k가 소수임을 확인하기 위해서는 prime[k]==true 임을 활용
+		for(int i=rightBorderIndex;i>numPrimes;i--){
+			if(prime[i]==true){
+				break;
+			}
+			
+		}
 		
 
 		// (3) 결과 출력
-		// cout << sum[rightBorderIndex] << " " << (rightBorderIndex + 1) << endl;
+		 cout << sum[rightBorderIndex] << " " << (rightBorderIndex + 1) << endl;
 
 	}
 

@@ -72,13 +72,16 @@ int main()
 	* 여기서부터 코드를 수정하세요.
 	*/
 	// 배열 primes[]에 저장된 값 모두 출력
-	for (int i = 0; i < numPrimes; i++)
-		cout << primes[i] << " ";
-	cout << endl;
+	//for (int i = 0; i < numPrimes; i++)
+		//cout << primes[i] << " ";
+	//cout << endl;
 
 	// N[0]보다 작은 큰 소수 출력
-	int index = BinarySearch(primes, 0, numPrimes - 1, N[0] - 1);
+	for(int i=0;i<T;i++){
+		int index = BinarySearch(primes, 0, numPrimes - 1, N[i] - 1);
 	cout << primes[index] << endl;
+	}
+	
 	
 	return 0;
 }
