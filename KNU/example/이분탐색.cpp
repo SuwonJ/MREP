@@ -6,8 +6,8 @@ using namespace std;
 
 int BinarySearch(int* list, int from, int to, int I, int depth) {
 	if (from > to) {
-		//cout << "found the answer after " << depth << " comparisons" << endl;
-		return -1;	// I does not exist in list
+		cout << "found87788 the answer after " << depth << " comparisons" << endl;
+		return from;	// I does not exist in list
 	}
 
 	int mid = (from + to) / 2;
@@ -23,7 +23,7 @@ int BinarySearch(int* list, int from, int to, int I, int depth) {
 
 int main() {	
 	// create an array with random integers between 0~999
-	int listLength = 10;
+	int listLength = 100;
 	int* list = new int[listLength];
 	srand(time(0));					// seed random number generator
 	for (int i = 0; i < listLength; i++) {
