@@ -16,7 +16,7 @@ vector<int> primeFactorization(int n) {
 		while (n % i == 0) {
 			primeFactors.push_back(i);
             
-			n /= i;
+			    
 		}
 	}
 
