@@ -100,8 +100,8 @@ int main()
 				if (prime[sum]) 
 				{
 					// (1) sum이 소수라면 maxLength, maxSum 조정
-					// maxLength = ?;
-					// maxSum = ?;					
+					maxLength =col-row+1;
+					maxSum = sum;
 
 
 					break;
@@ -109,9 +109,8 @@ int main()
 			}
 
 			// (2) 다음 행에서 사용할 rightBorder와 leftBorder 값 지정
-			// rightBorder = ?;
-			// leftBorder = ?;
-			
+			 rightBorder = rightBorder+1;
+			 leftBorder += 2;
 
 		}
 
