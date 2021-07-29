@@ -38,7 +38,7 @@ int main()
 	vector<int> primes = Sieve(100);
 
 	// T개 만큼의 N을 입력받아 답을 출력
-	int T;
+	int T,maxP;
 	unsigned long long N;
 	cin >> T;
 	for (int i = 0; i < T; i++) 
@@ -53,8 +53,9 @@ int main()
 		/*
 		* 여기서부터 코드를 작성하세요
 		*/ 
-		
-
+			for(int i=0;i<N;i++){
+				primes.at(i);
+			}
 		/*
 		* 여기까지 코드를 작성합니다.
 		*/

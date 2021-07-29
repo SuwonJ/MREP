@@ -77,7 +77,7 @@ int main()
 		/*
 		* 여기서부터 코드를 작성하세요.
 		*/
-		
+		cout<<primes.at(BinarySearch(primes,0, primes.size()-1,N.at(i)))<<endl;;
 		/*
 		* 여기까지 코드를 작성합니다.
 		*/
