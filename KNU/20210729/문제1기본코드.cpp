@@ -52,9 +52,16 @@ int main()
 		// 그 다음 소수인 3은 primes.at(1)로 읽을 수 있음
 		/*
 		* 여기서부터 코드를 작성하세요
-		*/ 
+		*/
+	unsigned long long tmp=0;
 			for(int i=0;i<N;i++){
-				primes.at(i);
+				nMax*=primes.at(i);
+				if(nMax>N){
+					nMax=tmp;
+					break;
+					
+				}
+				tmp=nMax;
 			}
 		/*
 		* 여기까지 코드를 작성합니다.

@@ -55,7 +55,7 @@ int main()
 	long N;
 	cin >> N;
 
-	measureTime("");
+	//measureTime("");
 
 	double maxNPhi = 0;
 	long maxN = 0;
@@ -70,9 +70,9 @@ int main()
 		}
 	}
 
-	measureTime("");
+	//measureTime("");
 
-	cout << "n = " << maxN << " 일 때 n/phi(n)이 최댓값 " << maxNPhi << " 가짐" << endl;
+	cout <<maxNPhi << endl;
 
 	return 0;
 }
