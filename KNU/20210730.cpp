@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	// K, N, I 값을 차례로 입력받음
-	int K, N, I;
+	int K, N, I; //K==전체 크기  N==주사위 크기  I==횟수
 	cin >> K >> N >> I;
 
 	vector<double> prob;			// P[i] (state i에 도달할 확률) 차례대로 저장하는 리스트
