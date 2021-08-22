@@ -10,7 +10,7 @@ int main(void) {
     cin >> G;
     while ((!(getg(s, e) > G && e - s == 1)) && e > s)
     {
-        if (getg(s, e) < G) {
+        if (getg(s, e) < G) {       
             e++;
         }
         if (getg(s, e) > G) {
