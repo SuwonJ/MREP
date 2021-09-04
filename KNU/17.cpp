@@ -141,9 +141,26 @@ int main() {
 	cout<<intersectList(l2,l4)<<endl;
 	cout<<intersectList(l3,l4)<<endl;
 	*/
+	/*
 	AnglePair r1 = AnglePair(-pi, -pi/4);	
 	AnglePair r2 = AnglePair(-pi/2,pi/2);
 	AnglePair r3 = AnglePair(0,pi/4);
 	AnglePair r4 = AnglePair(pi/4*3,pi);
+
+	AnglePair r5 = merge(r1,r2);
+	AnglePair r6 = merge(r2,r3);
+	AnglePair r7 = merge(r1,r4);
+
+
+	cout<<r5.from<<"~"<<r5.to<<"\n";
+	cout<<r6.from<<"~"<<r6.to<<"\n";
+	cout<<r7.from<<"~"<<r7.to<<"\n";
+	*/
+	vector<AnglePair>l1=createAnglePairList(0,0,-2,2,-2,-2);
+	//vector<AnglePair>l1=createAnglePairList(0,0,5,-2);
+	for(int i=0;i<l1.size();i++){
+		cout<< l1[i].from<<"~"<<l1[i].to<<endl;
+	}
+	cout<<"\n";
 	return 0;
 }
