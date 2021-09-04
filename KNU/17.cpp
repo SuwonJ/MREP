@@ -116,6 +116,7 @@ int main() {
 	cout<<intersect(r2,r3)<<endl;
 	cout<<intersect(r2,r4)<<endl;
 	*/
+	/*3
 	AnglePair r1 = AnglePair(-pi, -pi/4);	
 	AnglePair r2 = AnglePair(-pi/2,pi/2);
 	AnglePair r3 = AnglePair(0,pi/4);
@@ -132,9 +133,17 @@ int main() {
 	vector<AnglePair> l3;
 	l3.push_back(r4);
 
-	cout<<intersectList(l1,l2)<<endl;
-	cout<<intersectList(l1,l3)<<endl;
-	cout<<intersectList(l2,l3)<<endl;
+	vector<AnglePair> l4;
+	l4.push_back(r3);
+	l4.push_back(r4);
 
+	cout<<intersectList(l1,l4)<<endl;
+	cout<<intersectList(l2,l4)<<endl;
+	cout<<intersectList(l3,l4)<<endl;
+	*/
+	AnglePair r1 = AnglePair(-pi, -pi/4);	
+	AnglePair r2 = AnglePair(-pi/2,pi/2);
+	AnglePair r3 = AnglePair(0,pi/4);
+	AnglePair r4 = AnglePair(pi/4*3,pi);
 	return 0;
 }
