@@ -28,8 +28,13 @@ void dijst(int strt){
 }
 
 int main(void){
-    int N,M,K,X;
-    cin>>N>>M>>K>>X;
+    int A,B,N,M;
+    cin>>A>>B;
+    cin>>N>>M;
+    int arr[M];
+    for(int i=0;i<M;i++){
+        cin>>
+    }  
     int tmpa,tmpb;
     for(int i=0;i<N+1;i++){
         minD[i]=INTS;
