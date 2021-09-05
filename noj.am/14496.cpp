@@ -31,29 +31,20 @@ int main(void){
     int A,B,N,M;
     cin>>A>>B;
     cin>>N>>M;
-    int arr[M];
-    for(int i=0;i<M;i++){
-        cin>>
-    }  
-    int tmpa,tmpb;
+    int arr[M]; 
     for(int i=0;i<N+1;i++){
-        minD[i]=INTS;
+        minD[i]=INTS;   
     }
-    
-     for(int i=1;i<M+1;i++){
-         int tmpu,tmpv;
-        cin>>tmpu>>tmpv;
-        vec[tmpu].push_back(make_pair(1,tmpv));
-    }
-    dijst(X);
+    for(int i=0;i<M;i++){
+        cin>>arr[M];
+    } 
+    dijst(A);
     int nx=1;
     for(int i=1;i<1000001;i++){
-        if(minD[i]==K){
+        if(minD[i]==B){
             nx=0;
             cout<<i<<"\n";
         }
     }
-    if(nx==1) cout<<-1<<"\n";
-
     return 0;
 }
