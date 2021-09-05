@@ -9,7 +9,6 @@ priority_queue<pair<int, int>> pq;
 vector<pair<int, int>> vec[1000001];
 
 void dijst(int strt){
-   
     minD[strt]=0;
     pq.push(make_pair(0,strt));
     while (pq.empty()==false){
@@ -32,7 +31,7 @@ int main(void){
     int N,M,K,X;
     cin>>N>>M>>K>>X;
     int tmpa,tmpb;
-    for(int i=0;i<M+1;i++){
+    for(int i=0;i<N+1;i++){
         minD[i]=INTS;
     }
     
