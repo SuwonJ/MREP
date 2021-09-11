@@ -31,5 +31,10 @@ int findP(int a,int b){
     }
 }
 int main(void){
-
+    unionP(1,2);
+    unionP(2,3);
+    unionP(3,4);
+    unionP(5,6);
+    unionP(6,7);
+    cout<<findP(1,5);
 }
