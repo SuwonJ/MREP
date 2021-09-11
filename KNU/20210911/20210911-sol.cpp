@@ -299,6 +299,8 @@ void createShade(Map &map)
 
 	vector<AnglePair> obstacleList;	// player 현재 위치 기준으로 장애물이 있는 각도 범위의 목록 
 
+	obstacleList.push_back(AnglePair(map.d2*pi/180,map.d1*pi/180));
+
 	// player의 현재 위치로부터 최대로 얼마나 멀리 떨어진 거리까지 정사각형을 그리며 조사해야 하는지 결정
 	int distanceMax = max(max(max(map.N - map.sPlayer, map.N - map.tPlayer), map.sPlayer - 1), map.tPlayer - 1);
 
@@ -326,20 +328,6 @@ int main()
 	// 장애물 지도와 사용자의 현재 s(가로), t(세로) 좌표 입력받아 Map 객체 생성
 	Map map = Map("test1.txt");
 
-	printMap(map);
-
-	createShade(map);
-	printShade(map);
-
-	setPlayerPosition(map, 5, 1);
-	createShade(map);
-	printShade(map);
-
-	setPlayerPosition(map, 5, 3);
-	createShade(map);
-	printShade(map);
-
-	setPlayerPosition(map, 5, 5);
 	createShade(map);
 	printShade(map);
 
