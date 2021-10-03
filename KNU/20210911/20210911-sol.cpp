@@ -298,8 +298,13 @@ void createShade(Map &map)
 	map.shade.insert(map.shade.begin(), map.N + 1, vector<int>(map.N + 1, 0));
 
 	vector<AnglePair> obstacleList;	// player 현재 위치 기준으로 장애물이 있는 각도 범위의 목록 
-
-	obstacleList.push_back(AnglePair(map.d2*pi/180,map.d1*pi/180));
+	if(map.d2<map.d1){
+		obstacleList.push_back(AnglePair(map.d2*pi/180,map.d1*pi/180));
+	}
+	else{
+		
+	}
+	
 
 	// player의 현재 위치로부터 최대로 얼마나 멀리 떨어진 거리까지 정사각형을 그리며 조사해야 하는지 결정
 	int distanceMax = max(max(max(map.N - map.sPlayer, map.N - map.tPlayer), map.sPlayer - 1), map.tPlayer - 1);
