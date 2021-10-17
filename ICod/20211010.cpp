@@ -1,37 +1,38 @@
 #include<iostream>
 using namespace std;
-int INF=2147483647;
-int arr[4][4]=
-{
-    {0,5,INF,8},
-    {7,0,9,INF},
-    {2,INF,0,4},
-    {INF,INF,3,0}
-};
+int INF = 10000001;
 
 
-int main(void){
-    int nodecnt;
-    cin>>nodecnt;
-    int d[nodecnt][nodecnt];
-    for(int i=0;i<nodecnt;i++){
-        for(int j=0;j<nodecnt;i++){
-            d[i][j]=arr[i][j];
+int main(void) {
+    int nodecnt = 0, m = 0, ta, tb, tc;
+    cin >> nodecnt;
+    int d[101][101];
+    for (int i = 1; i <= nodecnt; i++) {
+        for (int j = 1; j <= nodecnt; j++) {
+            if (i == j) d[j][i] = 0;
+            else d[j][i] = INF;
         }
     }
-    for(int i=0;i<nodecnt;i++){
-        for(int j=0;j<nodecnt;i++){
-            for(int k=0;k<nodecnt;k++){
-                if(d[j][i]+d[i][k]<d[j][k]){
-                    d[j][k]=d[j][i]+d[i][k];
+    cin >> m;
+    for (int i = 0; i < m; i++) {
+        cin >> ta >> tb >> tc;
+        if(d[ta][tb]>tc)  d[ta][tb] = tc;
+    }
+    for (int i = 1; i <= nodecnt; i++) {
+        for (int j = 1; j <= nodecnt; j++) {
+            for (int k = 1; k <= nodecnt; k++) {
+                if (d[j][i] + d[i][k] < d[j][k]) {
+                    d[j][k] = d[j][i] + d[i][k];
                 }
             }
         }
     }
-    for(int i=0;i<nodecnt;i++){
-        for(int j=0;j<nodecnt;j++){
-            cout<<d[i][j];
+    for (int i = 1; i <= nodecnt; i++) {
+        for (int j = 1; j <= nodecnt; j++) {
+            if (d[i][j] == INF) cout << 0<<" ";
+            else cout << d[i][j]<<" ";
         }
+        cout << "\n";
     }
     return 0;
 }
