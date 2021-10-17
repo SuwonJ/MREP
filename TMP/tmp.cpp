@@ -10,6 +10,6 @@ int main(void) {
     int a,b;
     cin>>a>>b;
     for(int i=0;i<100;i++){
-        cout<<a+b;
+        cout<<a*i;
     }
-} 
+}
